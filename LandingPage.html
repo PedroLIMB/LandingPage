@@ -8,53 +8,132 @@
         *{
             margin: 0;
         }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(33, 16, 44);
+        }
+        header{
+            background-color: rgb(33, 16, 44);
+            display: flex;
+            justify-content: space-between;
+            color: rgb(0, 236, 0);
+        }
+        .titulo{
+            margin-left: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .menu{
+            display: flex;
+            margin: 20px;
+            font-family: Geneva, Verdana, sans-serif;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+        }
+        .esquerda{
+            width: 70%;
+            background-color: rgb(33, 16, 44);
+            color: rgb(0, 236, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .direita{
+            width: 30%;
+            background-image: url(Imagens/Estadio2.jpg);
+        }
+        h1{
+            color: rgb(0, 236, 0);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 35px;
+            margin: 30px;
+        }
+        .maior{
+            margin-top: 30px;
+            margin-bottom: 10px;
+            margin-left: 30px;
+        }
+        label{
+            margin-left: 30px;
+        }
+        input{
+            margin-left: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: transparent;
+        }
+        .descricao{
+            margin: 30px;
+        }
+        h3{
+            margin: 10px;
+        }
+        h4{
+            margin: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 25px;
+        }
+        .foto{
+            margin-top: 370px;
+        }
+        .enviar{
+            margin-left: 225px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div>
+        <div class="titulo">
             <h2>Fotball</h2>
-        </div>
-        <div>
             <h2>Top Center</h2>
         </div>
-        <div>
-            <li>Home</li>
-            <li>Produtos</li>
-            <li>Contatos</li>
+        <div class="menu">
+                <ul><strong>Home</strong></ul>
+                <ul><strong>Produtos</strong></ul>
+                <ul><strong>Contatos</strong></ul>
         </div>
-        <section>
-            <h1>A melhor loja sobre futebol no Brasil</h1>
-            <h3>Bem vindo de volta!</h3>
-            <form action="formulario.php" method="post" autocomplete="on">
-                <label for="iusuario">Usuario</label>
-                <input type="text" name="usuario" id="iusuario">
-                <label for="isenha">Senha</label>
-                <input type="password" name="senha" id="isenha">
-            </form>
-        </section>
-        <section>
-            <picture>
-                <source media="(min-width: )" srcset="">
-                <source media="(min-width: )" srcset="">
-                <img src="" alt="">
-            </picture>
-        </section>
-        <footer>
-            <h3>O que nos temos</h3>
-            <div>
-                <h4>Qualidade</h4>
-                <p>Produtos com a melhor qualidade do Brasil</p>
+    </header><hr>
+        <div class="container">
+    <section class="esquerda">
+                <h1>A melhor loja sobre futebol no Brasil!</h1>
+                <h3 class="maior">Bem vindo de volta!</h3>
+                <form action="formulario.php" method="post" autocomplete="on">
+                    <p>
+                        <label for="iusuario">Usuario</label>
+                        <input type="text" name="usuario" id="iusuario">
+                    </p>
+                    <p>
+                        <label for="isenha">Senha</label>
+                        <input type="password" name="senha" id="isenha" size="22">
+                    </p>
+                    <input class="enviar" type="submit">
+                </form>
+                <div class="descricao">
+                    <h3>O que nos temos</h3>
+                    <div>
+                        <h4>Qualidade</h4>
+                        <p>Produtos com a melhor qualidade do Brasil</p>
+                    </div>
+                    <div>
+                        <h4>Descontos</h4>
+                        <p>Descontos especias para os usuarios deste site</p>
+                    </div>
+                    <div>
+                        <h4>Entrega Rapida</h4>
+                        <p>Uma das entregas mais rapidas do Brasil</p>
+                    </div>
+                </div>
+    </section>
+    <section class="direita">
+            <div class="foto">
+                <picture>
+                    <source media="(max-width: 750px)" srcset="Imagens/Loja200.png">
+                    <source media="(max-width: 1050px)" srcset="Imagens/Loja300.png">
+                    <img src="Imagens/Loja400.png" alt="Foto">
+                </picture>
             </div>
-            <div>
-                <h4>Descontos</h4>
-                <p>Descontos especias para os usuarios deste site</p>
-            </div>
-            <div>
-                <h4>Entrega Rapida</h4>
-                <p>Uma das entregas mais rapidas do Brasil</p>
-            </div>
-        </footer>
-    </header>    
+    </section>
+    </div>
 </body>
 </html>
